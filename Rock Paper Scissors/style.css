@@ -1,0 +1,46 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.h1
+{
+    background-color: #081b31;
+    color: #fff;
+    height: 5rem;
+    text-align: center;
+    line-height: 5rem;
+}
+
+.choice
+{
+    height: 180px;
+    width: 180px;
+    align-items: center;
+    display: flex;
+}
+
+img
+{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+img:hover
+{
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+.Choice
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 5rem;
+}
