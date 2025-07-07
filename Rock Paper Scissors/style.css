@@ -44,3 +44,69 @@ img:hover
     gap: 3rem;
     margin: 5rem;
 }
+
+.Score-Board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+}
+.Score {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #081b31;
+    color: white;
+    transition: all 0.3s ease;
+}
+.animated-score {
+    position: relative;
+    overflow: hidden;
+}
+.animated-score::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent 30%
+    );
+    animation: rotate 4s linear infinite;
+}
+.animated-score::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: #081b31;
+    border-radius: 50%;
+    z-index: 1;
+}
+.Score p {
+    position: relative;
+    z-index: 2;
+    margin: 5px 0;
+}
+.Score p:first-child {
+    font-size: 3rem;
+    font-weight: bold;
+}
+@keyframes rotate {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+.Score:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
