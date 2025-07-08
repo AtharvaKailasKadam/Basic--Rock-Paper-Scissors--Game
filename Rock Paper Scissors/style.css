@@ -5,13 +5,41 @@
     text-align: center;
 }
 
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 .h1
 {
-    background-color: #081b31;
+    background-color: #8F87F1;
     color: #fff;
     height: 5rem;
     text-align: center;
     line-height: 5rem;
+}
+.h1:hover
+{
+    transform: scale(1.1) translateY(-5px);
+    cursor: pointer;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 1);
 }
 
 .choice
@@ -32,6 +60,7 @@ img
 }
 img:hover
 {
+    cursor: pointer;
     transform: scale(1.1) translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.7);
 }
@@ -52,7 +81,9 @@ img:hover
     gap: 5rem;
     margin-top: 3rem;
     font-size: 1.5rem;
+    perspective: 1000px;
 }
+
 .Score {
     width: 150px;
     height: 150px;
@@ -63,12 +94,15 @@ img:hover
     align-items: center;
     background-color: #081b31;
     color: white;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
+    transform-style: preserve-3d;
 }
+
 .animated-score {
     position: relative;
     overflow: hidden;
 }
+
 .animated-score::before {
     content: '';
     position: absolute;
@@ -83,6 +117,7 @@ img:hover
     );
     animation: rotate 4s linear infinite;
 }
+
 .animated-score::after {
     content: '';
     position: absolute;
@@ -91,21 +126,118 @@ img:hover
     border-radius: 50%;
     z-index: 1;
 }
+
 .Score p {
     position: relative;
     z-index: 2;
     margin: 5px 0;
+    transition: all 0.3s ease;
 }
+
 .Score p:first-child {
     font-size: 3rem;
     font-weight: bold;
 }
+
 @keyframes rotate {
     100% {
         transform: rotate(1turn);
     }
 }
+
 .Score:hover {
-    transform: scale(1.1) translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 1);
+    transform: scale(1.1) translateY(-5px) rotateY(10deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.Score:hover p {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.Score.pulse {
+    animation: pulse 0.5s ease-in-out;
+}
+#msg
+{
+    display: flex;
+    border-radius: 1%;
+    background-color: #081b31;
+    color: orchid;
+    font-size: 2rem;
+    margin-top: 5rem;
+    display: inline;
+    border-radius: 1rem;
+}
+
+
+#msg {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #081b31;
+    color: orchid;
+    font-size: 2rem;
+    margin-top: 5rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+#msg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+#msg:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+#msg:hover::before {
+    left: 100%;
+}
+
+#msg:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+}
+
+#msg:hover {
+    animation: textGlow 2s infinite;
 }
