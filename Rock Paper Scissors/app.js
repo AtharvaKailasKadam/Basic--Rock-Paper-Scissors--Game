@@ -28,6 +28,7 @@ const PlayGame = (userchoice) =>{
     {
         console.log(DrawGame());
         msg.innerText="Draw..! Play Again.";
+        msg.style.backgroundColor = "yellow";
     }
     else
     {
@@ -44,21 +45,25 @@ const PlayGame = (userchoice) =>{
         {
             UserWin = CompChoice === "Rock" ? false : true;
         }
-        ShowWinner(UserWin);
+        ShowWinner(UserWin, userchoice, CompChoice);
     }
 }
 
-const ShowWinner = (UserWin) => {
+const ShowWinner = (UserWin, userchoice, CompChoice) => {
     if (UserWin)
     {
+        UserScore++;
+        US.innerText = UserScore;
         console.log("You Win");
-        msg.innerText = "You Win...!";
+        msg.innerText = `You Win...! Your ${userchoice} beats Computer's ${CompChoice}`;
         msg.style.backgroundColor = "green";
     }
     else
     {
+        CompScore++;
+        CS.innerText = CompScore;
         console.log("You Lose");
-        msg.innerText = "You Lose...!";
+        msg.innerText = `You Lose...! Your ${CompChoice} beats Computer's ${userchoice}`;
         msg.style.backgroundColor = "red";
 
     }
