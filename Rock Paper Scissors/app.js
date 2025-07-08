@@ -28,7 +28,7 @@ const PlayGame = (userchoice) =>{
     {
         console.log(DrawGame());
         msg.innerText="Draw..! Play Again.";
-        msg.style.backgroundColor = "yellow";
+        msg.style.backgroundColor = "cyan";
     }
     else
     {
