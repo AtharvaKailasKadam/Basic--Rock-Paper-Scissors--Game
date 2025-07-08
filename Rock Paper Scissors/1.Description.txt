@@ -1,0 +1,13 @@
+ The Rock Paper Scissors game is built using HTML, CSS, and JavaScript.
+
+ It allows the player to compete against the computer in a simple, interactive format.
+
+ The game logic is implemented in JavaScript, handling the core gameplay and user input.
+
+ The CSS patterns were enhanced using AI-generated styling, adding a unique and visually appealing theme to the interface.
+
+ The layout is responsive and designed to work smoothly across different screen sizes.
+
+ The AI-assisted design approach adds a creative touch that sets this version apart from standard implementations.
+
+ This project showcases a balanced blend of functionality and creativity, perfect for both beginners and design enthusiasts.
