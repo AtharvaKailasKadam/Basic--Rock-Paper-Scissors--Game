@@ -1,19 +1,30 @@
+🪨📄✂️ Rock Paper Scissors Game:- A simple and interactive Rock Paper Scissors game built with HTML, CSS, and JavaScript. Play against the computer in a fun match of logic and luck, with a responsive UI, basic animations, and score tracking. Great for beginners exploring web development and JavaScript.
+
 # ✊🖐✌️ Rock Paper Scissors Game
 
 ![HTML](https://img.shields.io/badge/HTML-5-E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-TRAE%20AI-264de4?style=flat&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
-This is a simple **Rock Paper Scissors Game** built using **HTML**, **CSS** (designed with the help of **TRAE AI**), and **JavaScript**. The game allows the user to play against the computer with interactive logic and smooth UI.
+This is a simple Rock Paper Scissors game built using **HTML**, **CSS** (with the help of **TRAE AI**), and **JavaScript**. The player competes against the computer, which picks a random move. The game is interactive, fun, and responsive.
 
 ---
 
 ## 🔹 Features
 
-- Classic Rock 🪨, Paper 📄, Scissors ✂️ gameplay
-- User vs Computer with random AI-based choices
-- Clean and responsive UI powered by TRAE AI
-- Built by learning from tutorials and web resources
+- Play Rock 🪨, Paper 📄, or Scissors ✂️
+- Random computer opponent logic
+- Score tracking and result display
+- Clean and responsive design using TRAE AI
+- Built using tutorials and online sources
+
+---
+
+## 📁 Files Included
+
+- `index.html` – Web page structure
+- `style.css` – CSS styled with TRAE AI patterns
+- `script.js` – Game logic and interactivity
 
 ---
 
@@ -23,35 +34,21 @@ This is a simple **Rock Paper Scissors Game** built using **HTML**, **CSS** (des
 const choices = ["rock", "paper", "scissors"];
 const computerChoice = choices[Math.floor(Math.random() * 3)];
 
-The player selects an option
+You click a move
+The computer randomly picks one
+The result is shown based on game rules
 
-The computer randomly chooses one
+## 📚 Learning Sources
+YouTube tutorials
+GitHub examples
+TRAE AI for styling help
+Web development blogs and resources
 
-The result is displayed based on standard game rules
-
-📁 Project Files
-index.html – Game layout
-
-style.css – Styles created using TRAE AI suggestions
-
-script.js – Game logic and interaction
-
-📚 Learning Sources
-YouTube JavaScript mini-game tutorials
-
-GitHub open-source examples
-
-CSS generated with help of TRAE AI
-
-Online web development communities
-
-🛠️ Run It Locally
-bash
-Copy
-Edit
+## To Install it..
 git clone https://github.com/AtharvaKailasKadam/Basic--Rock-Paper-Scissors--Game.git
 cd Basic--Rock-Paper-Scissors--Game
 open index.html
-📸 Preview
+
+
 
 
